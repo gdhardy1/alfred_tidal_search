@@ -26,10 +26,7 @@ tell application "System Events"
 		repeat while cycles <=10
 			try
                 tell application "TIDAL" to activate
-				if enabled of menu item "Select All" of menu "Edit" of menu bar 1 and Â
-                    enabled of menu item "Search" of menu "Navigation" of menu bar 1 and Â
-                    enabled of menu item "Copy" of menu "Edit" of menu bar 1 and Â
-                    enabled of menu item "Paste" of menu "Edit" of menu bar 1 then
+				if enabled of menu item "Select All" of menu "Edit" of menu bar 1 and enabled of menu item "Search" of menu "Navigation" of menu bar 1 and enabled of menu item "Copy" of menu "Edit" of menu bar 1 and enabled of menu item "Paste" of menu "Edit" of menu bar 1 then
                     
 					tell application "TIDAL" to activate -- force focus on TIDAL app to ensure actions don't fail or affect other apps if user clicks away before script finishes
                     click (menu item "Search" of menu "Navigation" of menu bar 1)
